@@ -1,0 +1,22 @@
+{
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "extends": ["standard", "plugin:react/recommended", "prettier"],
+  "parser": "babel-eslint",
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "globals": {
+    "shallow": true,
+    "render": true,
+    "mount": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.6.3"
+    }
+  }
+}
