@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "homepage": "https://AhmadKabakibi.github.io/foursquare-venues",
+  "homepage": "https://ahmadkabakibi.github.io/foursquare-venues",
   "dependencies": {
     "gh-pages": "2.0.1",
     "react": "16.6.3",
@@ -14,6 +14,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.js\" && prettier --list-different \"src/**/*.js\" | snazzy",
     "predeploy": "npm run build",
