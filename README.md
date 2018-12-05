@@ -1,5 +1,7 @@
 ## Foursquare Venues
 
+[![Build Status](https://travis-ci.org/AhmadKabakibi/foursquare-venues.svg?branch=master)](https://travis-ci.org/AhmadKabakibi/foursquare-venues)
+
 list of available venues based on the user location
 
 ### Online Demo
