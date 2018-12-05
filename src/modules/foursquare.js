@@ -44,7 +44,9 @@ export default class FoursquareVenues {
           .then(result => {
             resolve(result.data.response)
           })
-          .catch(error => reject(error))
+          .catch(error => {
+            reject(error.message)
+          })
       })
     })
   }

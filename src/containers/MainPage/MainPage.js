@@ -4,6 +4,7 @@ import logo from './logo.svg'
 import './MainPage.css'
 
 import VenuesCollection from '../../components/VenuesCollection'
+import Error from '../../components/Error'
 
 class MainPage extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class MainPage extends Component {
       radius: 500,
       showingResults: 0,
       total: 0,
-      error: {}
+      error: ''
     }
   }
 
@@ -41,9 +42,10 @@ class MainPage extends Component {
   }
 
   render() {
-    const { venues } = this.state
+    const { venues, error } = this.state
     return (
       <div className="App">
+        {error && <Error error={error} />}
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
