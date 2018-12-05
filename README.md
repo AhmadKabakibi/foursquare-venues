@@ -2,11 +2,13 @@
 
 list of available venues based on the user location
 
-### `Online Demo`
+### Online Demo
 
 Foursquare Venues [demo](https://ahmadkabakibi.github.io/foursquare-venues)
 
 ### Getting Started
+
+You'll need to add your own `Client ID` `Client Secret` to the .env to allow auth with foursquare API.
 
 `npm run start` Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

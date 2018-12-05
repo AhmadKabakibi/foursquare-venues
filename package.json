@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
+  "author": "a.kabakibi",
   "homepage": "https://ahmadkabakibi.github.io/foursquare-venues",
   "dependencies": {
+    "axios": "0.18.0",
     "gh-pages": "2.0.1",
     "react": "16.6.3",
     "react-dom": "16.6.3",
+    "react-router-dom": "4.3.1",
     "react-scripts": "2.1.1"
   },
   "scripts": {
