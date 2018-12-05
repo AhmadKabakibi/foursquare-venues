@@ -8,6 +8,7 @@ class MainPage extends Component {
     super(props)
     this.foursquare = new FoursquareVenues()
     this.state = {}
+    this.foursquare.getVenues(500, '').then(r => console.log('Venues: ', r))
   }
 
   render() {
