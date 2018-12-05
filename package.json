@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "CI=true react-scripts test --env=jsdom",
     "test:coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.js\" && prettier --list-different \"src/**/*.js\" | snazzy",
