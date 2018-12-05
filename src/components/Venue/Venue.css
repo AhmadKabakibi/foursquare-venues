@@ -1,0 +1,12 @@
+.card {
+  cursor: pointer;
+}
+.card-header {
+  background-color: #03344a;
+  color: #ffa000;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  background-position: right center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

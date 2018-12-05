@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import FoursquareVenues from '../../modules/foursquare'
-import logo from './logo.svg'
+import { Alert } from 'reactstrap'
 import './MainPage.css'
 
 import VenuesCollection from '../../components/VenuesCollection'
@@ -44,12 +44,15 @@ class MainPage extends Component {
   render() {
     const { venues, error } = this.state
     return (
-      <div className="App">
-        {error && <Error error={error} />}
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        {venues ? <VenuesCollection venues={venues} /> : null}
+      <div>
+        <div className="container">
+          {error && <Error error={error} />}
+          {venues.length ? (
+            <VenuesCollection venues={venues} />
+          ) : (
+            <Alert color="primary">No venues found.</Alert>
+          )}
+        </div>
       </div>
     )
   }
