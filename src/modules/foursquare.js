@@ -1,11 +1,10 @@
 import axios from 'axios'
-
 export default class FoursquareVenues {
   constructor() {
     this.BASE_URL = 'https://api.foursquare.com/v2/venues/search'
     this.CLIENT_ID = process.env.REACT_APP_CLIENT_ID
     this.CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET
-    this.defaultRange = 25
+    this.defaultRange = 250
     this.limit = 50
     this.userLocation = window.sessionStorage
       ? window.sessionStorage.getItem('userLocation')
@@ -42,8 +41,8 @@ export default class FoursquareVenues {
       this.getUserLocation().then(() => {
         axios
           .get(url)
-          .then(response => {
-            resolve(response)
+          .then(result => {
+            resolve(result.data.response)
           })
           .catch(error => reject(error))
       })
