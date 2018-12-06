@@ -31,18 +31,18 @@ export default class FoursquareVenues {
   }
 
   getVenues(radius, query) {
-    radius = parseInt(radius, 10) || this.defaultRange
-    const url = `${this.BASE_URL}?client_id=${this.CLIENT_ID}&client_secret=${
-      this.CLIENT_SECRET
-    }&ll=${this.userLocation}&radius=${radius}&query=${query}&limit=${
-      this.limit
-    }&v=${this._apiVersion()}`
-
     return new Promise((resolve, reject) => {
       this.getUserLocation().then(() => {
+        radius = parseInt(radius, 10) || this.defaultRange
         debounce(
           axios
-            .get(url)
+            .get(
+              `${this.BASE_URL}?client_id=${this.CLIENT_ID}&client_secret=${
+                this.CLIENT_SECRET
+              }&ll=${this.userLocation}&radius=${radius}&query=${query}&limit=${
+                this.limit
+              }&v=${this._apiVersion()}`
+            )
             .then(result => {
               resolve(result.data.response)
             })
