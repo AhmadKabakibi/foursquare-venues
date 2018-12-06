@@ -26,22 +26,19 @@ class MainPage extends Component {
   }
 
   getVenues() {
-    setTimeout(
-      this.foursquare
-        .getVenues(this.state.radius, this.state.query)
-        .then(venues => {
-          this.setState({ noResults: !venues.length })
-          this.setState({
-            showingResults: venues.length,
-            total: venues.length,
-            venues: Object.values(venues)[0]
-          })
+    this.foursquare
+      .getVenues(this.state.radius, this.state.query)
+      .then(venues => {
+        this.setState({ noResults: !venues.length })
+        this.setState({
+          showingResults: venues.length,
+          total: venues.length,
+          venues: Object.values(venues)[0]
         })
-        .catch(error => {
-          this.setState({ error: error })
-        }),
-      1000
-    )
+      })
+      .catch(error => {
+        this.setState({ error: error })
+      })
   }
 
   onKeyUp(event) {

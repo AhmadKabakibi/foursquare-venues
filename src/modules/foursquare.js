@@ -1,4 +1,5 @@
 import axios from 'axios'
+import debounce from 'debounce-promise'
 export default class FoursquareVenues {
   constructor() {
     this.BASE_URL = 'https://api.foursquare.com/v2/venues/search'
@@ -39,14 +40,17 @@ export default class FoursquareVenues {
 
     return new Promise((resolve, reject) => {
       this.getUserLocation().then(() => {
-        axios
-          .get(url)
-          .then(result => {
-            resolve(result.data.response)
-          })
-          .catch(error => {
-            reject(error.message)
-          })
+        debounce(
+          axios
+            .get(url)
+            .then(result => {
+              resolve(result.data.response)
+            })
+            .catch(error => {
+              reject(error.message)
+            }),
+          300
+        )
       })
     })
   }
