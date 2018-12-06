@@ -1,4 +1,5 @@
-## :pushpin: 🗿 🌌 Foursquare Venues
+## :pushpin: 🗿 🌌
+## Foursquare Venues
 
 [![Build Status](https://travis-ci.org/AhmadKabakibi/foursquare-venues.svg?branch=master)](https://travis-ci.org/AhmadKabakibi/foursquare-venues)
 
