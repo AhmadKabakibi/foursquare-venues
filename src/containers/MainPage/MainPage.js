@@ -56,8 +56,9 @@ class MainPage extends Component {
       return <Alert color="primary">No venues found nearby you.</Alert>
     } else {
       return (
+        // TODO add loader animation
         <div>
-          <div className="pacman" />
+          <div className="loader" />
           <div className="dot" />
         </div>
       )
